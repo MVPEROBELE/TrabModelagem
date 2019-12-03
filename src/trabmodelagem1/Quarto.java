@@ -37,7 +37,7 @@ public class Quarto {
         else 
         {
             paciente=null;
-            this.nomePaciente=null;
+            this.nomePaciente="0";
         }
         
     }

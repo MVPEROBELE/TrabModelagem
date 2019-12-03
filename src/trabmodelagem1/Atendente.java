@@ -22,18 +22,18 @@ public static ArrayList<Quarto> listaQuartos;
     }
 
     void criaQuartos(){
-        reservarQuarto(101, null);
-        reservarQuarto(102, null);
-        reservarQuarto(103, null);
-        reservarQuarto(104, null);
-        reservarQuarto(201, null);
-        reservarQuarto(202, null);
-        reservarQuarto(203, null);
-        reservarQuarto(204, null);
-        reservarQuarto(301, null);
-        reservarQuarto(302, null);
-        reservarQuarto(303, null);
-        reservarQuarto(304, null);
+        reservarQuarto(101, "0");
+        reservarQuarto(102, "0");
+        reservarQuarto(103, "0");
+        reservarQuarto(104, "0");
+        reservarQuarto(201, "0");
+        reservarQuarto(202, "0");
+        reservarQuarto(203, "0");
+        reservarQuarto(204, "0");
+        reservarQuarto(301, "0");
+        reservarQuarto(302, "0");
+        reservarQuarto(303, "0");
+        reservarQuarto(304, "0");
         
     }
     

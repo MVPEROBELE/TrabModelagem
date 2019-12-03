@@ -18,21 +18,22 @@ public class TelaQuartos extends javax.swing.JFrame {
     /**
      * Creates new form TelaQuartos
      */
-    String[] nomes = new String[12];
+    public String[] nomes = new String[12];
     public TelaQuartos() {
-        initComponents();
-       
-        
+        initComponents();     
+        defineString();
     }
 
     void defineString (){
         String aux="Livre";
   
         for (int i=0; i<12 ;i++){
-            if (Atendente.listaQuartos.get(i).nomePaciente()!=null)
-                nomes[i]=Atendente.listaQuartos.get(i).nomePaciente();
-            else 
+          //  if (Atendente.listaQuartos.get(i).nomePaciente()!="0")
+           //     nomes[i]=Atendente.listaQuartos.get(i).nomePaciente();
+           // else 
                 nomes[i]=aux;
+            
+            System.out.println ("  "+this.nomes[i]);
         }
     }
     /**
@@ -47,6 +48,7 @@ public class TelaQuartos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -81,15 +83,32 @@ public class TelaQuartos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 60, 340, 220);
+        jScrollPane1.setBounds(20, 60, 340, 300);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Quartos");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(20, 20, 80, 20);
 
-        pack();
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonVoltar);
+        jButtonVoltar.setBounds(261, 20, 100, 23);
+
+        setSize(new java.awt.Dimension(416, 439));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+
+        
+        this.dispose();
+
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +146,7 @@ public class TelaQuartos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
